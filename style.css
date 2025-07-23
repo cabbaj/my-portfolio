@@ -1,6 +1,9 @@
 :root {
     --ff: Arial, Helvetica, sans-serif;
-    --h3: bold 1rem var(--ff);
+    --h1: bold 80px/96px var(--ff);
+    --h2: bold 40px/48px var(--ff);
+    --h3: bold 24px/32px var(--ff);
+    --p: 20px/28px var(--ff);
 }
 
 * {
@@ -29,61 +32,86 @@
 
 body {
     background-color: var(--bg-dark);
+    justify-items: center;
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+    font: var(--h3);
+}
+
+p {
+    font: var(--p);
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
 }
 
 .nav-container {
     background-color: var(--bg);
     padding: 1.5rem 1rem 1.5rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     box-shadow: 0px 4px 4px #00000030, 0px 12px 12px #00000015;
     font: var(--h3);
+    justify-items: center;
+}
 
-    a {
-        color: var(--text);
-        text-decoration: none;
-    }
+.nav-container .nav-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
-    .nav-links-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+.nav-container .nav-wrapper .nav-links-container {
+    display: flex;
+    flex-direction: row;
+}
 
-        .nav-links {
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
+.nav-container .nav-wrapper .nav-links-container .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
 
-            li {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
+.nav-container .nav-wrapper .nav-links-container button {
+    background-color: transparent;
+    padding: 14px;
+    /* decrease the margin to center the button cuz we add the padding */
+    margin: -10px 0 -10px 1rem;
+    border: none;
+    cursor: pointer;
+}
 
-                a {
-                    color: var(--text-muted);
-                }
+.nav-container .nav-wrapper .nav-links-container button:hover {
+    border-radius: 8px;
+    background-color: var(--hover);
+}
 
-                a:hover {
-                    color: var(--text);
-                }
-            }
-        }
+.nav-container .nav-wrapper .nav-links-container .nav-links li {
+    margin: 0;
+    padding: 0;
+}
 
-        button {
-            background-color: transparent;
-            padding: 10px;
-            margin: -10px 0 -10px 22px;
-            border: none;
-            cursor: pointer;
-            overflow: hidden;
+.nav-container .nav-wrapper .nav-links-container .nav-links li a {
+    color: var(--text-muted);
+}
 
-        }
-
-        button:hover {
-            border-radius: 8px;
-            background-color: var(--hover);
-        }
-    }
-
+.nav-container .nav-wrapper .nav-links-container .nav-links li a:hover {
+    color: var(--text);
 }
