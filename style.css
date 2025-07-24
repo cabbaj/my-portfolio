@@ -165,3 +165,18 @@ main {
 .skills {
     max-width: 1440px;
 }
+
+.skills .skills-card-container {
+    margin: 40px 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skills .skills-card-container .skills-card {
+    width: 140px;
+    border: blue solid;
+    background-color: var(--bg);
+}
