@@ -56,10 +56,14 @@ a {
     text-decoration: none;
 }
 
+
+
+/************* HEADER ************/
 header {
     width: 100%;
 }
 
+/************* navbar ************/
 .nav-container {
     background-color: var(--bg);
     padding: 1.5rem 1rem 1.5rem 1rem;
@@ -114,4 +118,50 @@ header {
 
 .nav-container .nav-wrapper .nav-links-container .nav-links li a:hover {
     color: var(--text);
+}
+
+
+
+/************* MAIN ************/
+main {
+    border: red solid;
+}
+
+/************* hero section ************/
+.hero {
+    border: blue solid;
+    max-width: 1440px;
+}
+
+.hero .hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.hero .hero-wrapper .hero-content {
+    color: var(--text);
+}
+
+.hero .hero-wrapper .hero-img {
+    height: 400px;
+}
+
+.hero .hero-wrapper .hero-img img {
+    border-radius: 8px;
+}
+
+/************* about section ************/
+.about {
+    max-width: 1440px;
+    border: blue solid;
+}
+
+.about .about-wrapper {
+    display: flex;
+}
+
+/************* skills section ************/
+.skills {
+    max-width: 1440px;
 }
