@@ -149,9 +149,10 @@ main {
 
 .hero .hero-wrapper .hero-img img {
     border-radius: 8px;
+    object-fit: cover;
 }
 
-/************* about section ************/
+/************* about me section ************/
 .about {
     max-width: 1440px;
     border: blue solid;
@@ -159,6 +160,14 @@ main {
 
 .about .about-wrapper {
     display: flex;
+}
+
+.about .about-wrapper .intro {
+    width: 500px;
+}
+
+.about .about-wrapper .profile p {
+    color: var(--text-muted);
 }
 
 /************* skills section ************/
@@ -170,13 +179,26 @@ main {
     margin: 40px 10px 0 10px;
     display: flex;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: left;
     gap: 20px;
     flex-wrap: wrap;
 }
 
 .skills .skills-card-container .skills-card {
-    width: 140px;
+    width: 160px;
+    height: 160px;
     border: blue solid;
     background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .skills-card-container .skills-card img {
+    margin: auto auto;
+    width: 60px;
+    height: 60px;
+}
+
+.skills .skills-card-container .skills-card p {
+    margin: auto auto;
 }
