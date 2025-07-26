@@ -1,9 +1,5 @@
-:root {
-    --ff: Arial, Helvetica, sans-serif;
-    --h1: bold 80px/96px var(--ff);
-    --h2: bold 40px/48px var(--ff);
-    --h3: bold 24px/32px var(--ff);
-    --p: 20px/28px var(--ff);
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -12,14 +8,21 @@
     box-sizing: border-box;
 }
 
-.light {
+:root {
+    --ff: Arial, Helvetica, sans-serif;
+    --h1: bold 80px/96px var(--ff);
+    --h2: bold 40px/48px var(--ff);
+    --h3: bold 24px/32px var(--ff);
+    --p: 20px/28px var(--ff);
     --bg-dark: hsl(0, 0%, 90%);
     --bg: hsl(0, 0%, 95%);
     --bg-light: hsl(0, 0%, 100%);
     --hover: hsl(0, 0%, 90%);
+    --accent: hsl(130, 60%, 60%);
     --text: hsl(0, 0%, 5%);
     --text-muted: hsl(0, 0%, 30%);
 }
+
 
 .dark {
     --bg-dark: hsl(0, 0%, 2%);
@@ -31,6 +34,7 @@
 }
 
 body {
+    font: var(--ff);
     background-color: var(--bg-dark);
     justify-items: center;
 }
@@ -61,6 +65,8 @@ a {
 /************* HEADER ************/
 header {
     width: 100%;
+    top: 0;
+    position: sticky;
 }
 
 /************* navbar ************/
@@ -143,8 +149,26 @@ main {
     color: var(--text);
 }
 
+.hero .hero-wrapper .hero-content span {
+    color: var(--accent);
+}
+
+.hero .hero-wrapper .hero-content .btn {
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: var(--accent);
+    border-radius: 100px;
+    font: var(--p);
+}
+
+.hero .hero-wrapper .hero-content .btn a {
+    text-decoration: none;
+    padding: 12px 20px;
+    color: hsl(0, 0% ,5%); 
+}
+
 .hero .hero-wrapper .hero-img {
-    height: 400px;
+    height: 480px;
 }
 
 .hero .hero-wrapper .hero-img img {
