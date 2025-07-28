@@ -10,10 +10,10 @@ html {
 
 :root {
     --ff: Arial, Helvetica, sans-serif;
-    --h1: bold 80px/96px var(--ff);
-    --h2: bold 40px/48px var(--ff);
-    --h3: bold 24px/32px var(--ff);
-    --p: 20px/28px var(--ff);
+    --h1: bold 60px/66px var(--ff);
+    --h2: bold 40px/52px var(--ff);
+    --h3: bold 20px/30px var(--ff);
+    --p: 16px/24px var(--ff);
     --bg-dark: hsl(0, 0%, 90%);
     --bg: hsl(0, 0%, 95%);
     --bg-light: hsl(0, 0%, 100%);
@@ -25,9 +25,9 @@ html {
 
 
 .dark {
-    --bg-dark: hsl(0, 0%, 2%);
-    --bg: hsl(0, 0%, 5%);
-    --bg-light: hsl(0, 0%, 10%);
+    --bg-dark: hsl(0, 0%, 7%);
+    --bg: hsl(0, 0%, 13%);
+    --bg-light: hsl(0, 0%, 19%);
     --hover: hsl(0, 0%, 10%);
     --text: hsl(0, 0%, 95%);
     --text-muted: hsl(0, 0%, 70%);
@@ -37,6 +37,10 @@ body {
     font: var(--ff);
     background-color: var(--bg-dark);
     justify-items: center;
+}
+
+body section {
+    margin-top: 120px;
 }
 
 h1 {
@@ -84,7 +88,6 @@ header {
     justify-content: space-between;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .nav-container .nav-wrapper .nav-links-container {
@@ -97,6 +100,20 @@ header {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+}
+
+.nav-container .nav-wrapper .nav-links-container .nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container .nav-wrapper .nav-links-container .nav-links li a {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.nav-container .nav-wrapper .nav-links-container .nav-links li a:hover {
+    color: var(--text);
 }
 
 .nav-container .nav-wrapper .nav-links-container button {
@@ -113,20 +130,6 @@ header {
     background-color: var(--hover);
 }
 
-.nav-container .nav-wrapper .nav-links-container .nav-links li {
-    margin: 0;
-    padding: 0;
-}
-
-.nav-container .nav-wrapper .nav-links-container .nav-links li a {
-    color: var(--text-muted);
-}
-
-.nav-container .nav-wrapper .nav-links-container .nav-links li a:hover {
-    color: var(--text);
-}
-
-
 
 /************* MAIN ************/
 main {
@@ -142,7 +145,6 @@ main {
 .hero .hero-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
 }
 
 .hero .hero-wrapper .hero-content {
@@ -153,18 +155,21 @@ main {
     color: var(--accent);
 }
 
-.hero .hero-wrapper .hero-content .btn {
-    cursor: pointer;
-    padding: 12px 20px;
-    background-color: var(--accent);
-    border-radius: 100px;
-    font: var(--p);
+.hero .hero-wrapper .hero-content .description {
+    margin-top: 12px;
+    color: var(--text-muted);
 }
 
-.hero .hero-wrapper .hero-content .btn a {
+.hero .hero-wrapper .hero-content a {
+    margin-top: 24px;
     text-decoration: none;
-    padding: 12px 20px;
-    color: hsl(0, 0% ,5%); 
+    display: inline-block;
+    color: hsl(0, 0%, 5%);
+    background-color: var(--accent);
+    border-radius: 8px;
+    font: var(--p);
+    padding: 12px 24px;
+    font-weight: bold;
 }
 
 .hero .hero-wrapper .hero-img {
@@ -180,30 +185,103 @@ main {
 .about {
     max-width: 1440px;
     border: blue solid;
+    color: var(--text);
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .about .about-wrapper {
     display: flex;
+    justify-content: space-between;
 }
 
 .about .about-wrapper .intro {
-    width: 500px;
+    width: 400px;
+    background-color: var(--bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.about .about-wrapper .intro .intro-heading h3 {
+    display: inline-block;
+    background-color: var(--bg-light);
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.about .about-wrapper .profile {
+    margin: 0 0 0 0;
+    justify-items: center;
+    align-content: center;
+}
+
+.about .about-wrapper .profile .profile-img img {
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+}
+
+.about .about-wrapper .profile h3 {
+    text-align: center;
 }
 
 .about .about-wrapper .profile p {
     color: var(--text-muted);
+    text-align: center;
 }
+
+.about .about-wrapper .education {
+    margin: 0 0 0 0;
+    background-color: var(--bg);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.about .about-wrapper .education .education-heading h3 {
+    display: inline-block;
+    background-color: var(--bg-light);
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.about .about-wrapper .education .muted {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.about .about-wrapper .education .uni {
+    margin-bottom: 40px;
+}
+
+.about .about-wrapper .education {
+    font-weight: bold;
+}
+
+.about .about-wrapper .education .year {
+    font-weight: bold;
+}
+
+
+
+
 
 /************* skills section ************/
 .skills {
     max-width: 1440px;
+    justify-items: center;
 }
 
 .skills .skills-card-container {
-    margin: 40px 10px 0 10px;
+    /* margin: 40px 10px 0 10px; */
     display: flex;
     justify-content: center;
-    justify-content: left;
+    justify-items: center;
+    /* justify-content: left; */
     gap: 20px;
     flex-wrap: wrap;
 }

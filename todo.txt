@@ -1,15 +1,13 @@
 *light need shadow, dark need highlight*
 
-do body css like a sajid web
 
 gradient silver on accent text
 
-add gif or project video
+add .gif or project video
 
-add some color circle blur on dark background
 
-hire me button link to content section
-
-fade up animation when open website or scrolling down
+CSS:
+- add some color circle blur on dark background
+- fade up animation when open website or scrolling down
 
 
