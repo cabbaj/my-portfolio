@@ -9,16 +9,17 @@ html {
 }
 
 :root {
-    --ff: Arial, Helvetica, sans-serif;
-    --h1: bold 60px/66px var(--ff);
-    --h2: bold 40px/52px var(--ff);
-    --h3: bold 20px/30px var(--ff);
-    --p: 16px/24px var(--ff);
+    --font-primary: inter;
+    --font-secondary: source code pro;
+    --h1: 900 60px/66px var(--font-primary);
+    --h2: bold 40px/52px var(--font-primary);
+    --h3: bold 20px/30px var(--font-primary);
+    --p: 16px/24px var(--font-primary);
     --bg-dark: hsl(0, 0%, 90%);
     --bg: hsl(0, 0%, 95%);
     --bg-light: hsl(0, 0%, 100%);
     --hover: hsl(0, 0%, 90%);
-    --accent: hsl(130, 60%, 60%);
+    --accent: hsl(345, 100%, 50%);
     --text: hsl(0, 0%, 5%);
     --text-muted: hsl(0, 0%, 30%);
 }
@@ -37,6 +38,10 @@ body {
     font: var(--ff);
     background-color: var(--bg-dark);
     justify-items: center;
+}
+
+main {
+    width: 1440px;
 }
 
 body section {
@@ -190,12 +195,33 @@ main {
 
 .about h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
+}
+
+.about .profile {
+    margin: 0 0 2rem 0;
+    justify-items: center;
+}
+
+.about .profile .profile-img img {
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+}
+
+.about .profile h3 {
+    text-align: center;
+}
+
+.about .profile p {
+    color: var(--text-muted);
+    text-align: center;
 }
 
 .about .about-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2.5rem;
 }
 
 .about .about-wrapper .intro {
@@ -213,26 +239,6 @@ main {
     border-radius: 8px;
 }
 
-.about .about-wrapper .profile {
-    margin: 0 0 0 0;
-    justify-items: center;
-    align-content: center;
-}
-
-.about .about-wrapper .profile .profile-img img {
-    object-fit: cover;
-    object-position: top;
-    border-radius: 8px;
-}
-
-.about .about-wrapper .profile h3 {
-    text-align: center;
-}
-
-.about .about-wrapper .profile p {
-    color: var(--text-muted);
-    text-align: center;
-}
 
 .about .about-wrapper .education {
     margin: 0 0 0 0;
@@ -255,7 +261,9 @@ main {
 }
 
 .about .about-wrapper .education .uni {
-    margin-bottom: 40px;
+    display: flex;
+    margin: 0 0 2rem 0;
+    gap: 1rem;
 }
 
 .about .about-wrapper .education {
@@ -266,6 +274,12 @@ main {
     font-weight: bold;
 }
 
+.about .about-wrapper .education .school {
+    display: flex;
+    gap: 1rem;
+}
+
+
 
 
 
@@ -273,22 +287,23 @@ main {
 /************* skills section ************/
 .skills {
     max-width: 1440px;
-    justify-items: center;
+    /* justify-items: center; */
+}
+
+.skills h2 {
+    text-align: center;
 }
 
 .skills .skills-card-container {
-    /* margin: 40px 10px 0 10px; */
-    display: flex;
     justify-content: center;
-    justify-items: center;
-    /* justify-content: left; */
-    gap: 20px;
-    flex-wrap: wrap;
+    margin: 40px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
 }
 
 .skills .skills-card-container .skills-card {
-    width: 160px;
-    height: 160px;
+    padding: 20px 24px;
     border: blue solid;
     background-color: var(--bg);
     display: flex;
@@ -302,5 +317,5 @@ main {
 }
 
 .skills .skills-card-container .skills-card p {
-    margin: auto auto;
+    margin: 1rem auto auto auto;
 }

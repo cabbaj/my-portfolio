@@ -1,7 +1,7 @@
 *light need shadow, dark need highlight*
 
 
-gradient silver on accent text
+gradient silver on accent text (emerald color)
 
 add .gif or project video
 

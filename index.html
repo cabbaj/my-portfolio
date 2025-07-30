@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="style.css" />
     <title>Phompowadon's Portfolio</title>
     <link rel="icon" href="./img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,541;1,541&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -59,15 +65,12 @@
       <section id="home" class="hero">
         <div class="hero-wrapper">
           <div class="hero-content">
-            <h1>
-              Hello There!<br />
-              I'm <span>Phompowadon</span>
-            </h1>
+            <h1>Hi, I'm Pure👋</h1>
             <div class="description">
               <p>Welcome to my portfolio website</p>
               <p>I'm glad you're here.</p>
             </div>
-            <a href="#contact">Hire Me</a>
+            <a href="#contact" style="color: white;">Hire Me</a>
           </div>
           <div class="hero-img">
             <img src="./img/car.jpeg" width="480px" height="480px" alt="car" />
@@ -78,6 +81,16 @@
       <!-- about me section -->
       <section class="about">
         <h2>About Me</h2>
+
+        <div class="profile">
+          <div class="profile-img">
+            <img src="./img/me.jpg" width="200px" height="200px" alt="me" />
+          </div>
+          <div>
+            <h3>Phompowadon Piwdee</h3>
+            <p>Front-End Developer</p>
+          </div>
+        </div>
 
         <div class="about-wrapper">
           <div class="intro">
@@ -93,22 +106,14 @@
             </p>
           </div>
 
-          <div class="profile">
-            <div class="profile-img">
-              <img src="./img/me.jpg" width="200px" height="200px" alt="me" />
-            </div>
-            <div>
-              <h3>Phompowadon Piwdee</h3>
-              <p>Front-End Developer</p>
-            </div>
-          </div>
-
           <div class="education">
             <div class="education-heading">
               <h3>EDUCATION</h3>
             </div>
             <div class="uni">
-              <p class="year">2021 - 2024</p>
+              <div>
+                <p class="year">2021 - 2024</p>
+              </div>
               <div>
                 <p style="font-weight: bold">
                   Rajamangala University of Technology Srivijaya
@@ -117,8 +122,11 @@
                 <p class="muted" style="font-weight: bold">GPA 3.73</p>
               </div>
             </div>
+
             <div class="school">
-              <p class="year">2018 - 2020</p>
+              <div>
+                <p class="year">2018 - 2020</p>
+              </div>
               <div>
                 <p style="font-weight: bold">Mahavajiravudh School</p>
                 <p class="muted">Sci - Math</p>
